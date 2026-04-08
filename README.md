@@ -1,8 +1,8 @@
-# *Trait Based Generalization*
+# 1. Trait Based Generalization
 
 Our new code architecture moves away from rigid inheritance hierarchies in favor of **behavior driven design**. By using **traits**, we decouple *what a component can do* from *what a component is*.
 
-## 1. The Core Principle: 
+## a. The Core Principle
 
 *Composition over Classification*
 
@@ -13,7 +13,7 @@ Our approach focuses on **traits as Capabilities**:
 * **Agnosticism:** A trait that does not care about the underlying data structure (the "What"); it only cares about the interface (the "How").
 * **Flattened Hierarchy:** Instead of deep nesting, we compose objects by "tagging" them with the specific behaviors they need.
 
-## 2. Generalization Across Abstractions
+## b. Generalization Across Abstractions
 
 The power of this architecture lies in its ability to apply the same logic to different layers of the system. Whether you are working on a low level data buffer or a high level UI component, if they share a common trait (e.g., `Loggable` or `Transformable`), they are treated identically by our utility functions.
 
@@ -23,7 +23,7 @@ The power of this architecture lies in its ability to apply the same logic to di
 | **Interchangeability** | High level logic can operate on any type that satisfies the trait requirements, facilitating easier testing and mocking. |
 | **Reduced Redundancy** | Common logic is written once within the trait implementation, rather than being duplicated across disparate modules. |
 
-## 3. Implementation Mindset
+## c. Implementation Mindset
 
 When contributing to this codebase, keep these three documentation goals in mind:
 
@@ -31,16 +31,12 @@ When contributing to this codebase, keep these three documentation goals in mind
 * **Boundary Clarity:** Clearly define the requirements an abstraction must meet to implement a trait.
 * **Predictability:** Ensure that a trait's behavior remains consistent, regardless of the abstraction it is applied to.
 
-
----
-
 > **Note to Contributors:** > When you see a trait in this system, think of it as a **contract**. If an object signs the contract, it gains the power of that behavior, and the rest of the system knows exactly how to interact with it without needing to know its private details.
 or now you will find all informations in the README/ folder. More infos very soon.
 
-# Decentralized Orchestration:
-## *Hardware as a Trait*
+# 2. Decentralized Orchestration
 
----
+## *Hardware as a Trait*
 
 The ultimate goal of this architecture is to extend "Composition over Classification" beyond the code and into the physical layer. By treating hardware deployments through the lens of trait based **Generalization**, the blockchain can govern server roles based on their proven capabilities rather than static assignments.
 
@@ -64,18 +60,18 @@ Our blockchain does not view a server as a fixed entity, but as a **Provider** o
 
 > **Note to Contributors:** When registering hardware, you aren't just "adding a server." You are adding a **Resource Capability** to the global pool. The blockchain acts as the ultimate scheduler, ensuring that the right traits are active at the right time to maintain system health.
 
-# *Architectural Compass*
+# 3. Architectural Compass
 
 To build technology that serves the next generation, we must treat data not as a commodity to be mined, but as a digital extension of the individual. Our ethical framework is hard coded into our architecture through three core pillars. **Integrity, Compartmentalization and Purpose.**
 
-## 1. Data Sovereignty & The "Right to Forget" by Design
+## a. Data Sovereignty & The "Right to Forget" by Design
 
 We view data through the lens of stewardship rather than ownership. Our systems are engineered to ensure that data remains under the control of its originator.
 
 * **Zero Persistence Defaults:** We prioritize ephemeral processing. Unless explicitly required for a core function, data should not "sit" in a database.
 * **Granular Portability:** Users must be able to extract their entire digital footprint in a machine readable format at any time. We don't build "walled gardens"; we build open plazas.
 
-## 2. Radical Data Separation
+## b. Radical Data Separation
 
 To prevent the creation of "digital shadows," Q-Stack mandates a strict separation of data layers. We believe that a person's identity, their behavior, and their sensitive attributes should never exist in a single, linkable pool.
 
@@ -83,24 +79,23 @@ To prevent the creation of "digital shadows," Q-Stack mandates a strict separati
 * **Siloed Environments:** Development, testing, and production environments are strictly isolated. Real user data is never used for testing; we utilize high fidelity synthetic data to ensure privacy without sacrificing performance.
 
 
-## 3. Model Integrity & Logical Isolation
+## c. Model Integrity & Logical Isolation
 
 As we deploy advanced models, we recognize the risk of "model collapse" or the unintended leaking of training data.
 
 * **Parameter Separation:** We separate the "reasoning engine" (the model) from the "knowledge base" (the data). This ensures that sensitive information is never "baked into" the weights of a model, where it could be inadvertently surfaced later.
 * **Bias Mitigation:** Ethics in AI is not a post processing step. We require continuous auditing of training sets to ensure they reflect the diverse reality of the European ecosystem, preventing the reinforcement of historical inequities.
 
-## 4. Minimalist Extraction (The Principle of Proportionality)
+## d. Minimalist Extraction (The Principle of Proportionality)
 
 If a feature requires $X$ amount of data to function, we strictly forbid the collection of $X+1$.
 
 * **Purpose Limitation:** Data collected for a specific service must never be repurposed for secondary commercial gain without a new, explicit mandate from the user.
 * **Transparency by Default:** Every API call and data handshake within the Q-Stack should be auditable. A developer should always be able to answer: *Why is this data being moved, and who does it benefit?*
 
-
----
-
 > **Our Stance on the "Digital Commons"** We believe the digital space should be civil and safe. We do not support or develop tools designed for mass surveillance, social scoring, or deceptive "dark patterns" intended to manipulate user behavior. Success for Q-Network is measured by the trust we build, not the volume of data we hoard.
+
+--- 
 
 # PolyForm Perimeter 1.0.1
 
