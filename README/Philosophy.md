@@ -38,7 +38,3 @@ When contributing to this codebase, keep these three documentation goals in mind
 
 > **Note to Contributors:** > When you see a trait in this system, think of it as a **contract**. If an object signs the contract, it gains the power of that behavior, and the rest of the system knows exactly how to interact with it without needing to know its private details.
 
-
----
-
-**Does this capture the specific "vibe" of your new architecture, or should we lean more into the specific performance/safety benefits of your chosen language? no**
